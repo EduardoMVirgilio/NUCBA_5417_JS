@@ -1,0 +1,10 @@
+#modal{
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%,-50%);
+    &::backdrop{
+        background-color: rgba(12, 12, 12, .7);
+        backdrop-filter: blur(4px);
+    }
+}
