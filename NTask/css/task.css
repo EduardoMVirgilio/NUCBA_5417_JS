@@ -1,0 +1,8 @@
+.tarea{
+    width: 100%;
+    padding: .25rem .75rem;
+    background-color: rgb(224, 224, 224);
+    &.completa{
+        background-color: rgb(55, 186, 55);
+    }
+}
