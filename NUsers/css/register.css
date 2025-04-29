@@ -1,0 +1,67 @@
+@import url("./base.css");
+
+#register h1{
+    background-image: linear-gradient(to left, violet, cyan);
+    background-clip: text;
+        color: transparent;
+        font-size: 2rem;
+        font-weight: 700;
+}
+
+#registerForm{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    align-items: center;
+    & fieldset{
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        gap: .25rem;
+        border: none;
+        outline: none;
+        & input{
+            border: .1rem solid transparent;
+            padding: .25rem;
+            &.error{
+                border-color: tomato ;
+            }
+            &.success{
+                border-color: greenyellow;
+            }
+        }
+        & output{
+            &.error{
+                color: tomato ;
+            }
+            &.success{
+                color: greenyellow;
+            }
+        }
+    }
+    & button{
+        padding: .25rem .75rem;
+        border-radius: 1.25rem;
+        background-image: linear-gradient(to left, violet, cyan);
+        color: snow;
+    }
+}
+
+#register nav{
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    align-items: center;
+    justify-content: flex-start;
+    & a{
+        color: snow;
+        font-weight: 600;
+        font-size: 1.25rem;
+        &:first-child{
+            text-decoration: none;
+            background-image: linear-gradient(to left, violet, cyan);
+            background-clip: text;   
+            color: transparent;
+        }
+    }
+}
