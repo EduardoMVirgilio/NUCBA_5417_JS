@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root{
+    --black: rgb(24,24,24);
+    --white: rgb(252,252,252);
+    --gray: rgb(48,48,48);
+    --light-gray: rgb(72,72,72);
+    --primary: rgb(12, 248, 172);
+}
+
+html{
+    background-color: var(--black);
+    scrollbar-width: none;
+}
+body{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
