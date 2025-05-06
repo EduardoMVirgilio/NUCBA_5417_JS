@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #track {
+        list-style: none;
+        display: flex;
+        flex-flow: row nowrap;
+        transition: all 240ms ease-in-out;
+      }
+      #carrusel {
+        width: 480px;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="carrusel">
+      <ul id="track">
+        <li>
+          <img src="http://placehold.co/480/purple/orange/?text=1" alt="" />
+        </li>
+        <li>
+          <img src="http://placehold.co/480/purple/orange/?text=2" alt="" />
+        </li>
+        <li>
+          <img src="http://placehold.co/480/purple/orange/?text=3" alt="" />
+        </li>
+      </ul>
+    </section>
+    <form>
+      <button type="button" id="btnPrev">anterior</button>
+      <button type="button" id="btnNext">siguiente</button>
+    </form>
+    <script type="module">
+      var indice = 1;
+      var intervalo;
+      const carrusel = document.querySelector("#carrusel");
+      const track = document.querySelector("#track");
+      const btnPrev = document.querySelector("#btnPrev");
+      const btnNext = document.querySelector("#btnNext");
+      btnNext.addEventListener("click", (e) => {
+        e.preventDefault();
+        let width = carrusel.clientWidth;
+        clearInterval(intervalo);
+        if (indice + 1 <= 3) {
+          track.style.transform = `translateX(-${width * indice}px)`;
+          indice += 1;
+        }
+      });
+      btnPrev.addEventListener("click", (e) => {
+        e.preventDefault();
+        let width = carrusel.clientWidth;
+        clearInterval(intervalo);
+        if (indice > 1) {
+          indice -= 1;
+          track.style.transform = `translateX(-${width * indice}px)`;
+        } else {
+          indice = 1;
+          track.style.transform = `translateX(-0px)`;
+        }
+      });
+      intervalo = setInterval(() => {
+        let width = carrusel.clientWidth;
+        console.log(indice);
+        indice += 1;
+        if (indice + 1 <= 3) {
+          track.style.transform = `translateX(-${width * indice}px)`;
+        } else if (indice > 3) {
+          indice = 0;
+          track.style.transform = `translateX(-${width * indice}px)`;
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>
