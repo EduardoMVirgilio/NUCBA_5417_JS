@@ -1,3 +1,4 @@
+// import { productos } from "./nfts.js";
 // Init Set Up
 var catalogo = [];
 var carrito = JSON.parse(localStorage.getItem("carrito")) || [];
