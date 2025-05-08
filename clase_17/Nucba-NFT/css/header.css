@@ -1,0 +1,138 @@
+body > header {
+  width: 100vw;
+  background-image: linear-gradient(#121e3c, var(--background));
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+
+body > header > a {
+  width: 8rem;
+}
+#navbar {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+#navbar a {
+  color: var(--text-gray);
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.05rem;
+}
+
+#navbar a::after {
+  content: "";
+  width: 100%;
+  height: 0.1rem;
+  background-color: var(--text-white);
+  transform-origin: right center;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+#navbar a:hover::after {
+  transform-origin: left center;
+  transform: scaleX(1);
+}
+
+#navbar a:first-child {
+  color: var(--text-white);
+}
+
+body > header > form {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+}
+
+body > header > form button {
+  width: 2rem;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: .1rem solid transparent;
+}
+body > header > form button svg {
+  fill: var(--text-white);
+  height: 100%;
+  object-fit: contain;
+}
+
+#btnMenu {
+  display: none;
+}
+
+/* Overlay */
+body::before {
+  content: "";
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: rgba(53, 53, 53, 0.2);
+  backdrop-filter: blur(0.25rem);
+  display: none;
+}
+
+body:has(#navbar.active)::before , body:has(#cart.active)::before{
+  display: flex;
+}
+
+@media (max-width: 1032px) {
+
+  body > header > form {
+    flex: 1;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+  }
+  #btnMenu {
+    display: flex;
+  }
+
+  #navbar {
+    position: fixed;
+    top: 5rem;
+    left: calc(25% / 2);
+    width: 75%;
+    background-color: var(--nav-bg);
+    border: 0.25rem solid var(--electric);
+    border-top: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem 2rem;
+    border-radius: 0 0 1rem 1rem;
+    z-index: 1;
+    gap: 1rem;
+    transform: translateY(-100vh);
+    transition: all 300ms ease-in-out;
+  }
+  #navbar a {
+    color: var(--text-gray);
+    font-weight: 400;
+    transition: all 250ms ease-in-out;
+  }
+  #navbar a:active {
+    color: var(--text-white);
+  }
+  #navbar a:hover {
+    color: var(--text-white);
+  }
+  #navbar.active {
+    transform: translateX(0);
+  }
+}
