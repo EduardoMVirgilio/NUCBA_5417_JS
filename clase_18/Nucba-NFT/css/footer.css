@@ -1,0 +1,19 @@
+body > footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+body > footer nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+body > footer nav a {
+  color: var(--text-gray);
+}
+body > footer p {
+  color: var(--text-gray);
+}

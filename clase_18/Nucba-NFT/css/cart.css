@@ -1,0 +1,91 @@
+#cart {
+  position: fixed;
+  right: 0;
+  top: 6rem;
+  background-image: linear-gradient(to top, #121e3c, var(--background));
+  min-height: 100dvh;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 33vw;
+  transform: translateX(100%);
+  transition: all 250ms ease-out;
+}
+#cart header {
+  color: var(--text-white);
+}
+
+#cart ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-height: calc(7.7rem * 3);
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+#cart ul li {
+  border: 0.2rem solid var(--electric);
+  display: flex;
+  align-items: center;
+  padding: 0.25rem;
+  border-radius: 1rem;
+}
+#cart ul li picture {
+  height: 6rem;
+}
+#cart ul li dl {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.25rem;
+}
+#cart ul li dl dd:nth-child(1) {
+  color: var(--text-white);
+  font-weight: 800;
+}
+#cart ul li dl dd:nth-child(2) {
+  color: var(--text-gray);
+  font-weight: 100;
+}
+#cart ul li dl dd:nth-child(3) {
+  color: transparent;
+  background: linear-gradient(to right, #30cfd0, #c43ad6 60%);
+  background-clip: text;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+#cart ul li fieldset {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  align-content: center;
+}
+#cart ul li fieldset button {
+  aspect-ratio: 1/1;
+  width: 2rem;
+  background-color: transparent;
+  border-radius: 0.25rem;
+  border: 0.1rem solid var(--electric);
+  color: var(--text-white);
+  font-weight: 800;
+}
+#cart ul li fieldset output {
+  color: var(--text-white);
+  font-weight: 800;
+}
+
+#cart.active {
+  transform: translateX(0);
+}
+
+
+@media (max-width: 1032px) {
+  #cart{
+    width: 75vw;
+  }
+}
