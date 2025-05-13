@@ -14,7 +14,29 @@
   transition: all 250ms ease-out;
 }
 #cart header {
+  width: 100%;
   color: var(--text-white);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 .25rem;
+  & form{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    & button{
+      aspect-ratio: 1/1;
+      width: 2rem;
+      background-color: transparent;
+      border-radius: 0.25rem;
+      border: 0.1rem solid var(--electric);
+      color: var(--text-white);
+      font-weight: 800;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 }
 
 #cart ul {
@@ -73,6 +95,10 @@
   border: 0.1rem solid var(--electric);
   color: var(--text-white);
   font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 #cart ul li fieldset output {
   color: var(--text-white);
@@ -83,6 +109,28 @@
   transform: translateX(0);
 }
 
+#cart footer{
+  width: 100%;
+  display: flex;
+  flex-flow:row wrap;
+  justify-content: flex-end;
+  align-items: center;
+  & dl{
+    flex: 1;
+    color: var(--text-white);
+    text-align: center;
+    & dt{
+      font-weight: 700;
+    }
+    & dd{
+      color: transparent;
+      background: linear-gradient(to right, #30cfd0, #c43ad6 60%);
+      background-clip: text;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+  }
+}
 
 @media (max-width: 1032px) {
   #cart{
