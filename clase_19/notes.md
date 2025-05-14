@@ -1,0 +1,9 @@
+- [ ] Sistemas de Modulos
+  - [ ] Exportar modulos
+  - [ ] Importar modulos
+- [ ] Librerias
+  - [ ] (Vite)[https://vite.dev/]
+  - [ ] (NPM)[https://www.npmjs.com/]
+  - [ ] (NodeJS)[https://nodejs.org/es]
+    - [ ] (Chocolatey)[https://community.chocolatey.org/]
+    - [ ] (Homebrew)[https://brew.sh/]
