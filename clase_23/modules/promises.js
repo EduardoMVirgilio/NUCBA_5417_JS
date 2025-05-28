@@ -1,1 +1,1 @@
-// Promesas
+// Promesas || new Promise
