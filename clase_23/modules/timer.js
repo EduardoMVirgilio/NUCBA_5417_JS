@@ -1,1 +1,3 @@
 // Timer
+// setTimeout
+// setInterval | clearInterval
