@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timers y Promesas | Clase 23</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <main>
+      <!-- Timer -->
+      <form id="timer">
+        <fieldset class="active">
+          <input
+            type="number"
+            min="0"
+            max="10"
+            step="1"
+            placeholder="minutos"
+          />
+          <input
+            type="number"
+            min="0"
+            max="55"
+            step="5"
+            id="segundos"
+            placeholder="segundos"
+          />
+        </fieldset>
+        <output id="time"> 00:05 </output>
+        <button type="button" id="start">Empezar</button>
+        <button type="button" id="stop">Detener</button>
+      </form>
+      <!-- Promesas -->
+      <form id="load">
+        <button type="button">Cargar información</button>
+        <span id="loader"></span>
+        <output id="data"></output>
+      </form>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

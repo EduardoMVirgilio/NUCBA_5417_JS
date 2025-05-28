@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #171443;
+}
+
+body{
+    min-height: 100dvh;
+    display: grid;
+    place-content: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 1280px;
+    background-color: transparent;
+    background-image: url("https://r4.wallpaperflare.com/wallpaper/556/382/458/fantasy-art-artwork-fan-art-science-fiction-wallpaper-a876bda8c0a03c38609c515e38f2347a.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+main{
+    width: 50dvh;
+    aspect-ratio: 1/1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    background-color: rgba(124, 236, 120,.3);
+    box-shadow: 0 0 .2rem .1rem rgba(124, 236, 120,.3);
+    backdrop-filter: blur(.2rem);
+    place-content: start;
+    place-items: center;
+}
