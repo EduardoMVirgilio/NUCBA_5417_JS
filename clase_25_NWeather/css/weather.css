@@ -1,0 +1,113 @@
+#search {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  gap: 0.25rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  & label {
+    font-size: 2rem;
+  }
+  & input {
+    background-color: #2c3442;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    max-width: 320px;
+    border-radius: 0 1.25rem 1.25rem 0;
+    color: white;
+    outline: none;
+    &::placeholder {
+      color: var(--white);
+    }
+  }
+  & small {
+    width: 100%;
+    text-align: center;
+    padding: 0.25rem;
+    font-size: 1rem;
+    color: white;
+    &.invalid {
+      background-color: crimson;
+      border-radius: 0.25rem;
+    }
+  }
+}
+
+#weather {
+  background-color: var(--primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding: 1.25rem;
+  border-radius: 1rem;
+  flex-flow: row wrap;
+  width: 100%;
+  @media (max-width: 768px) {
+    flex-flow: column nowrap;
+  }
+}
+
+#data {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  @media (max-width: 768px) {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  & dt {
+    font-size: 2.25rem;
+    font-weight: 300;
+  }
+  & dd {
+    color: var(--white);
+    font-size: 3rem;
+    & span {
+      font-size: 1rem;
+      background-color: var(--white-transparent);
+      padding: 0.25rem 0.75rem;
+      border-radius: 1.25rem;
+    }
+    &:not(:last-child) {
+      font-size: 1rem;
+      color: var(--white-semitransparent);
+      text-transform: capitalize;
+    }
+  }
+}
+
+#icono {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1/1;
+  & img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+#extra {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.25rem;
+  & li {
+    font-size: 1.25rem;
+    font-weight: 300;
+    text-align: center;
+    width: 100%;
+    &:last-child {
+      padding: 0.75rem 1.75rem;
+      border-top: 0.1rem solid var(--white-semitransparent);
+      border-bottom: 0.1rem solid var(--white-semitransparent);
+    }
+  }
+}

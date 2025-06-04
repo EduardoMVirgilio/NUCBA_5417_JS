@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NUCBA WEATHER | Clase 25</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <main>
+      <form id="search">
+        <label for="city">El clima en</label>
+        <input type="text" placeholder="Buscar Ciudad" id="city" name="city" />
+        <small id="feed">
+          Así está el clima en Buenos Aires, ¿Querés ver el clima de otra
+          ciudad?
+        </small>
+      </form>
+      <article id="weather">
+        <dl id="data">
+          <dt>Buenos Aires</dt>
+          <dd>nubes</dd>
+          <dd>
+            17°
+            <span>17° ST</span>
+          </dd>
+        </dl>
+        <picture id="icono">
+          <img
+            src="https://openweathermap.org/img/wn/04d@4x.png"
+            alt="icono de clima nubes"
+          />
+        </picture>
+        <ul id="extra">
+          <li>Max: 18º</li>
+          <li>Min: 16º</li>
+          <li>77% Humedad</li>
+        </ul>
+      </article>
+    </main>
+    <footer>
+      <p>Hecho con ❤️ en <span>NUCBAJS</span></p>
+    </footer>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

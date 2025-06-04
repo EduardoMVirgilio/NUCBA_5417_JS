@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+  --primary: rgba(36, 36, 72, 1);
+  --background: rgba(24, 32, 40, 1);
+  --background-transparent: rgba(24, 32, 40, 0.5);
+  --accent: rgba(206, 176, 44, 1);
+  --white: rgba(236, 236, 236, 1);
+  --white-transparent: rgba(236, 236, 236, 0.1);
+  --white-semitransparent: rgba(236, 236, 236, 0.7);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--background);
+  background: linear-gradient(190deg, var(--primary), var(--background) 58%);
+  height: 100%;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+main {
+  background-color: var(--background-transparent);
+  width: 100%;
+  max-width: 850px;
+  padding: 1.75rem 1.25rem;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 0 0.25rem 0 var(--primary);
+}
+
+ul {
+  list-style: none;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 36px;
+  color: rgb(116, 127, 140);
+}
+
+footer span {
+  color: var(--accent);
+  font-weight: 800;
+}
