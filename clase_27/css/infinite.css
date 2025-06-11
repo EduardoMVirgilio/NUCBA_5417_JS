@@ -1,0 +1,141 @@
+#list {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+  height: 75%;
+  max-height: 75%;
+  overflow-y: scroll;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: center;
+}
+
+.pokemon {
+  width: calc(100% / 3 - 1rem);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0.25rem;
+  gap: 0.25rem;
+  background-color: var(--glass);
+  border-radius: 0.25rem;
+  transform: scale(0.9);
+  cursor: pointer;
+  transition: all 240ms ease-in-out;
+  &:hover {
+    transform: scale(1);
+    background-color: var(--white);
+    & .pokeStats dt {
+      color: var(--background);
+    }
+  }
+  & picture {
+    width: auto;
+    height: 7rem;
+    aspect-ratio: 1/1;
+  }
+  & .pokeData {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    gap: 0.25rem;
+    & dt {
+      text-transform: uppercase;
+      font-family: var(--font-mon);
+      font-weight: 900;
+      color: var(--background);
+      text-align: center;
+    }
+    & dd {
+      display: flex;
+      flex-flow: row wrap;
+      gap: 0.25rem;
+      justify-content: center;
+      align-items: center;
+      align-content: start;
+      text-transform: uppercase;
+      font-family: var(--font-mon);
+      font-weight: 700;
+      text-align: center;
+      & span {
+        background-color: var(--red);
+        padding: 0.25rem 0.75rem;
+        color: var(--white);
+      }
+    }
+  }
+  & .pokeStats {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0.25rem;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: var(--font-mon);
+    font-weight: 700;
+    text-align: center;
+    & dt {
+      width: 50%;
+      color: var(--white);
+    }
+    & dd {
+      flex: 1;
+      background-color: var(--red);
+      padding: 0.25rem 0.75rem;
+      color: var(--white);
+    }
+  }
+}
+
+#loader {
+  position: relative;
+  height: 8rem;
+  aspect-ratio: 1/1;
+  background: linear-gradient(to bottom, var(--red) 50%, var(--white) 50%);
+  border-radius: 50%;
+  border: 0.5rem solid var(--background);
+  transform: scale(0);
+  opacity: 0;
+  transition: 0.25s ease-in-out;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 0.5rem;
+    width: 100%;
+    background: var(--background);
+    top: 50%;
+    transform: translatey(-50%);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    height: 2rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background: var(--white);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: inset 0 0 0 0.5rem var(--background),
+      inset 0 0 0 0.75rem var(--white), inset 0 0 0 1rem var(--background);
+  }
+  &.loading {
+    transform: scale(1);
+    opacity: 1;
+    transition: 0.25s ease-in-out;
+    animation: spin 1s 500ms linear infinite;
+  }
+}
+
+/* Spin Animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
