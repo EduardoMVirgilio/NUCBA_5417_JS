@@ -7,6 +7,8 @@ main {
   justify-content: flex-start;
   align-content: start;
   background-color: var(--overlay);
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0.25rem 0.25rem var(--shine);
 }
 
 main > header {
@@ -85,6 +87,9 @@ main > header {
       align-items: center;
       justify-content: flex-start;
       align-content: flex-start;
+    }
+    @media screen and (max-width: 768px) {
+      max-width: none;
     }
   }
 }

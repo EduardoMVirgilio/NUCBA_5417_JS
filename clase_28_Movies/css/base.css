@@ -5,6 +5,7 @@
   --title-font: cursive;
   --text-font: sans-serif;
   --active: rgb(128, 72, 248);
+  --shine: rgba(128, 72, 248, 0.25);
   --page: rgb(80, 16, 128);
   --disabled: rgb(32, 0, 64);
   --overlay: rgba(128, 72, 248, 0.6);
