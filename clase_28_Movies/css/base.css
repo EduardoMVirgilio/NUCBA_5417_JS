@@ -1,0 +1,42 @@
+:root {
+  --background: rgb(72, 0, 128);
+  --primary: rgb(144, 48, 252);
+  --white: rgb(252, 252, 252);
+  --title-font: cursive;
+  --text-font: sans-serif;
+  --active: rgb(128, 72, 248);
+  --page: rgb(80, 16, 128);
+  --disabled: rgb(32, 0, 64);
+  --overlay: rgba(128, 72, 248, 0.6);
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  font-family: var(--text-font);
+  color: var(--white);
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+body {
+  width: 100vw;
+  min-height: 100dvh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background);
+}
+
+ul {
+  list-style: none;
+}
+
+input[type="radio"] {
+  display: none;
+}

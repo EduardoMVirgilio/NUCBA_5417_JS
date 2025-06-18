@@ -1,0 +1,121 @@
+main {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: flex-start;
+  align-content: start;
+  background-color: var(--overlay);
+}
+
+main > header {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+#filter {
+  width: 100%;
+  padding: 0.25rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: start;
+  gap: 1rem;
+  & label {
+    padding: 0.25rem 0.75rem;
+    background-color: var(--primary);
+    cursor: pointer;
+    transform: scale(0.9);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.25s ease-in-out;
+    &:hover {
+      transform: scale(1);
+    }
+  }
+  & input[type="radio"]:checked + label {
+    transform: scale(1);
+    background-color: var(--page);
+  }
+}
+
+#list {
+  width: 100%;
+  padding: 0.25rem;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: start;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  & li {
+    width: 100%;
+    max-width: calc(100% / 4 - 1rem);
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    align-content: start;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: var(--primary);
+    & img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+    & p {
+      padding: 0.25rem;
+      width: 100%;
+      text-align: center;
+    }
+    & dl {
+      padding: 0.25rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      align-items: center;
+      justify-content: flex-start;
+      align-content: flex-start;
+    }
+  }
+}
+
+#paginate {
+  width: 100%;
+  padding: 0.25rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: start;
+  gap: 1rem;
+  & button {
+    padding: 0.25rem 0.75rem;
+    background-color: var(--primary);
+    cursor: pointer;
+    transform: scale(0.9);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.25s ease-in-out;
+    &:hover {
+      transform: scale(1);
+    }
+    &:disabled {
+      background-color: var(--disabled);
+      cursor: not-allowed;
+      &:hover {
+        transform: scale(0.9);
+      }
+    }
+  }
+}

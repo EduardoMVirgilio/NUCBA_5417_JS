@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nucba+ | Clase 28</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Nucba +</h1>
+        <p>Una experiencia audiovisual sin limites🎥</p>
+      </header>
+      <form id="filter">
+        <input
+          type="radio"
+          name="filter"
+          id="trending"
+          value="trending"
+          checked
+        />
+        <label for="trending">trending</label>
+        <input type="radio" name="filter" id="top_rated" value="top_rated" />
+        <label for="top_rated">top rated</label>
+        <input type="radio" name="filter" id="upcoming" value="upcoming" />
+        <label for="upcoming">upcoming</label>
+      </form>
+      <ul id="list">
+        <li>
+          <img
+            loading="lazy"
+            src="http://placehold.co/320x480/4B0082/E6E6FA/webp?text=1"
+            alt="pelicula"
+          />
+          <p>75% de popularidad</p>
+          <dl>
+            <dt>Campeones del mundo</dt>
+            <dd>Fecha de estreno: 18/12/2022</dd>
+          </dl>
+        </li>
+      </ul>
+      <form id="paginate">
+        <button type="button" disabled id="btnPrev">Anterior</button>
+        <output id="outPage">1</output>
+        <button type="button" id="btnNext">Siguiente</button>
+      </form>
+    </main>
+    <script type="module" src="/js/app.js"></script>
+  </body>
+</html>
